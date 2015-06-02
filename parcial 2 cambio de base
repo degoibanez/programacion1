@@ -1,0 +1,33 @@
+#include "stdafx.h"
+#include "conio.h"
+#include "math.h"
+#include <iostream>
+
+using namespace std;
+
+
+void main()
+{
+  float r;
+  int n,d,i,a,ND;
+  cout<< "INGRESE EL NUMERO" <<endl;
+  cin>> n;
+  cout<< "INGRESE LA BASE" <<endl;
+  cin>> r;
+  i=0;
+  d=0;
+  if(r>1 && r<10)
+   {  while(n>10)
+      {
+		 a=n % 10;
+		 n=n/10;
+		 d= pow (r,i)*a + d;
+		 i=i++;
+      }
+     ND= pow(r,i)*n+d;
+	 cout<< "el numero es : " << ND << " en base 10"<< endl;
+  }
+  else{cout<< "la base debe ser mayor a 1 y menor a 10"<< endl;}
+  getch();
+}
+
