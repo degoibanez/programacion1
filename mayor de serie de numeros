@@ -1,0 +1,28 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+using namespace std;
+
+
+void main()
+{ int a,b,i,MAY;
+  
+  cout<< " Introduzca cantidad de numeros que va ingresar: "<<endl ;
+  cin>> b; 
+  i=1;
+  MAY=0;
+  while (i<=b)
+  {
+   i++;
+   cout<< " Introduzca un numero: ";
+   cin>> a;
+   if(a>MAY)
+   { 
+	  MAY=a;
+   }
+  }
+  cout<< " El numero Mayor es: "<< MAY << endl;
+	getch();
+}
+
