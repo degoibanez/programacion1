@@ -1,0 +1,48 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+int MCD(int a, int b);
+
+
+
+void main()
+{   int mcm,a,b;
+	cout<<" Ingrese dos numeros naturales: "<<endl;
+	cin>>a;
+	cin>>b;
+	mcm= MCD(a,b);
+	cout<<"el MCD es: " << mcm;
+	getch();
+}
+
+ 
+
+
+int MCD(int a, int b)
+{int x,z,y=1,i=2;
+	
+		if(a<b)
+		{
+			x=a;
+			z=b;
+		}
+		else 
+		{
+			x=b;
+			z=a;
+		}
+	do{
+		if(x%i==0 && z%i==0)
+		{
+			y=y*i;
+			x=x/i;
+			z=z/i;
+		}
+		else
+		{i++;}
+	   }
+	while(i<=x);
+
+	return y;}
